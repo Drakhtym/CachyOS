@@ -1,0 +1,5 @@
+# Write your default config options here!
+fs=yes
+slang=en
+vo=xv
+ao=pulse

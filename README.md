@@ -1,4 +1,5 @@
 Config files for CachyOS rice.
+
 --------------------------------------
 
 OS - CachyOs

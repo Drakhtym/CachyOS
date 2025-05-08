@@ -26,12 +26,13 @@
         //"idle_inhibitor",
         "mpd",
         "custom/spotify"
+
     ],
     "modules-center": [
         //"hyprland/window",
         "clock#date",
         "custom/weather",
-        "custom/gammastep"
+        "custom/gammastep",
     ],
     "modules-right": [
         //"backlight",
@@ -43,9 +44,10 @@
         "cpu",
         //"bluetooth",
         "pulseaudio",
-        "custom/keyboard",
+        //"hyprland/language",
         //"wireplumber",
         //"custom/screenshot_t",
+        "hyprland/language",
         "tray"
     ],
 
@@ -113,7 +115,7 @@
 
     "memory": {
         "interval": 30,
-        "format": "  {used:0.2f} / {total:0.0f} GB",
+        "format": "  {used:0.2f} ({percentage}%)",
         "on-click": "alacritty -e btop"
     },
 
@@ -137,7 +139,7 @@
     },
     "network": {
         "format-wifi": " {essid} ({signalStrength}%)",
-        "format-ethernet": " {bandwidthUpBits}  {bandwidthDownBits}",
+        "format-ethernet": " {bandwidthDownBits}",
         "format-linked": "{ifname} (No IP) ",
         "format": "",
         "format-disconnected": "",
@@ -302,9 +304,8 @@
     },
 
     "custom/keyboard": {
-        "format": " {}",
         "interval": 1,
-        "exec": "$HOME/.config/waybar/get_kbdlayout.sh"
+        "exec": "$HOME/.config/waybar/current_kb_layout.sh"
     },
 
     "hyprland/workspaces": {
@@ -320,7 +321,7 @@
             "7": "七",
             "8": "八",
             "9": "九",
-            "10": "十",
+            "10": "十"
         },
         "on-scroll-up": "hyprctl dispatch workspace e+1 1>/dev/null",
         "on-scroll-down": "hyprctl dispatch workspace e-1 1>/dev/null",
@@ -387,7 +388,16 @@
         "exec": "~/.config/waybar/modules/github.sh",
         "interval" : 300,
         "return-type": "json",
-        "format": "<big><span font='JetBrains Mono Nerd Font'></span></big>",
+        "format": "<big><span font='JetBrains Mono Nerd Font'></span></big>"
         //"tooltip" : true
         },
+
+
+    "hyprland/language" : {
+        "format":"<big><span color='#DEC88C'> {short}</span></big>",
+        "tooltip":"true",
+        "min-length": 6
+    }
+
+
 }

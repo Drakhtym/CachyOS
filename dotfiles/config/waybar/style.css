@@ -38,7 +38,7 @@ window#waybar.hidden {
     border-radius: 6px;
     color: #94945A;
     background-color: #000000;
-    opacity: 0.5;
+    opacity: 0.35;
     transition: all 0.3s ease-in-out;
     font-size: 13px;  /* Slightly smaller font size */
 }
@@ -88,7 +88,11 @@ window#waybar.hidden {
 #custom-media,
 #mode,
 #idle_inhibitor,
-#mpd,
+#mpd  {
+    color: #DEC88C;
+    font-size: 17px;
+    margin-right: 10px
+}
 #bluetooth,
 #custom-hyprPicker,
 #custom-power-menu,
@@ -106,7 +110,7 @@ window#waybar.hidden {
 #custom-weather.default {
     background-color: transparent;
     color: #DEC88C;
-    border-radius: 14px;
+    margin-right: 350px;
     padding: 6px;  /* Adjusted padding */
 }
 
@@ -205,6 +209,7 @@ window#waybar.hidden {
 
 #pulseaudio {
     color: #DEC88C;
+    margin-right: 20px;
 }
 
 #backlight {
@@ -213,6 +218,8 @@ window#waybar.hidden {
 
 #clock {
     color: #DEC88C;
+    margin-right: 15px;
+    margin-left: 0px
 }
 
 #battery {
@@ -305,13 +312,13 @@ label:focus {
     color: #2d3436;
 }
 
-#language {
+/*#language {
     background: #00b093;
     color: #740864;
     padding: 0 0px;
     margin: 0 5px;
     min-width: 16px;
-}
+}*/
 
 #keyboard-state {
     background: #97e1ad;
@@ -332,4 +339,28 @@ label:focus {
 #custom-pacman {
     color: #DEC88C;
     background: transparent;
+    font-size: 18px;
 }
+
+#custom-github.authenticated {
+    color: #28a745;
+    /* padding: 0 10px; */
+    font-size: 20px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  #custom-github.not-authenticated {
+    color: #dc3545;
+   /* padding: 0 10px; */
+    font-size: 20px;
+    margin-right: 15px;
+    margin-left: 10px;
+  }
+  
+#hyprland-language{
+    color: #DEC88C;
+    margin-left: 20px;
+    
+  }
+
